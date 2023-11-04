@@ -1,0 +1,45 @@
+@import "./normalize.css";
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-Light.woff2') format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yantramanav';
+    src: url('../fonts/Yantramanav-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --clr-dark: #000000;
+    --clr-light: #FFFFFF;
+    --clr-grey-dark: #404040;
+    --clr-grey-light: #000000;
+
+    --brd-rd: 30px;
+    --brd: 1px solid #FFF;
+
+    --fnt-fml-base: 'Heebo', sans-serif;
+    --fnt-fml-accent: 'Yantramanav', sans-serif;
+
+    --inp-height: 54px;
+
+    --cont-width: 1300px;
+    --cont-padding-x: 15px;
+
+    --trans-duration: 0.2s;
+}
