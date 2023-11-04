@@ -28,7 +28,7 @@
     --clr-dark: #000000;
     --clr-light: #FFFFFF;
     --clr-grey-dark: #404040;
-    --clr-grey-light: #000000;
+    --clr-grey-light: #C4C4C4;
 
     --brd-rd: 30px;
     --brd: 1px solid #FFF;
@@ -43,3 +43,24 @@
 
     --trans-duration: 0.2s;
 }
+
+body {
+    font-family:  var(--fnt-fml-base);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--clr-grey-light);
+    background-color: var(--clr-dark);
+}
+
+.container {
+    max-width: calc(var(--cont-width) + var(--cont-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--cont-padding-x);
+}
+
+h1, h2, h3, h4 h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
