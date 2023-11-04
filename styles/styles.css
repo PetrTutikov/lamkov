@@ -45,12 +45,16 @@
 }
 
 body {
-    font-family:  var(--fnt-fml-base);
+    font-family: var(--fnt-fml-base);
     font-weight: 300;
     font-size: 16px;
     line-height: 1.75;
     color: var(--clr-grey-light);
     background-color: var(--clr-dark);
+}
+
+a, button, input, textarea, svg * {
+    transition-duration: var(--trans-duration);
 }
 
 .container {
@@ -64,3 +68,44 @@ h1, h2, h3, h4 h5, h6 {
     text-transform: uppercase;
 }
 
+a {
+    color: var(--clr-light);
+}
+a:hover {
+    color: var(--clr-grey-light);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.header-menu-list {
+    display: flex;
+    column-gap: 50px;
+}
+
+.header-menu-link {
+    /*увеличить область для клика*/
+    display: inline-flex;
+    align-items: center;
+    height: 90px;
+
+    column-gap: 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.header-menu-link.is-current::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: currentColor;
+    border-radius: 50%;
+
+}
