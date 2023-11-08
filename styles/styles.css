@@ -26,6 +26,7 @@
 
 :root {
     --clr-dark: #000000;
+    --clr-dark-alt: #131619;
     --clr-light: #FFFFFF;
     --clr-grey-dark: #404040;
     --clr-grey-light: #C4C4C4;
@@ -75,16 +76,43 @@ a:hover {
     color: var(--clr-grey-light);
 }
 
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 26px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: var(--clr-light);
+    height: 38px;
+    border: none;
+    border-radius: var(--brd-rd);
+}
+
+.button:hover {
+    background-color: var(--clr-grey-light);
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
+    padding-inline: 32px;
+    background-color: var(--clr-dark-alt);
+}
+
+.header-logo {
+    flex-shrink: 0;
 }
 
 .header-menu-list {
     display: flex;
     column-gap: 50px;
+    flex-wrap: wrap;
 }
 
 .header-menu-link {
@@ -104,8 +132,95 @@ a:hover {
 .header-menu-link.is-current::after {
     content: "";
     width: 5px;
-    height: 5px;
+    aspect-ratio: 1;
     background-color: currentColor;
     border-radius: 50%;
+}
+
+.header-actions {
+    display: flex;
+    column-gap: 40px;
+}
+
+.header-burger-button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+    width: 40px;
+    aspect-ratio: 1;
+    padding-left: 8px;
+    color: var(--clr-light);
+    background-color: transparent;
+    border: var(--brd);
+    border-radius: 50%;
+}
+
+.header-burger-button:hover {
+    color: var(--clr-grey-light);
+    border-color: currentColor;
+}
+
+.header-burger-button-line {
+    width: 6px;
+    height: 1px;
+    background-color: currentColor;
+    box-shadow: 16px 0 0 currentColor;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-top: 20px;
+        padding-inline: 15px;
+    }
+
+    .header-menu {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .header-menu-link {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        padding-inline: 18px;
+    }
+    .header {
+        padding-top: 10px;
+    }
+
+    .header-menu-list {
+        column-gap: 22px;
+    }
+
+    .header-menu-link {
+        height: 32px;
+    }
+
+    .header-actions {
+        column-gap: 15px;
+    }
+}
+
+
+@media screen and (max-width: 472px) {
 
 }
